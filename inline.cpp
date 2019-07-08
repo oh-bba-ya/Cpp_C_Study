@@ -20,9 +20,13 @@ inline int SQUARE(int x)
 	return x * x;
 }
 
-int main(int argc, char* argv[])
+int main(void)
 {
 	std::cout << SQUARE(5) << std::endl;
 	std::cout << SQUARE(12) << std::endl;
 	return 0;
 }
+
+//단 위의 경우 문제점이 있다.
+//문제점은 만약 x=3.15 와같은 실수일때 데이터 손실이 발생하여 결과값은 9가 나온다.
+//그렇기에 첫번째 예제처럼 #define 해준다면 자료형에 의존적이지 않은 함수가 된다. 그렇기에 데이터 손실이 발생되지 않을 수 있다.
