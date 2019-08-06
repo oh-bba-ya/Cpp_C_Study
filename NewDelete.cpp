@@ -12,7 +12,7 @@ char * MakeStrAdr(int len)
 int main(void)
 {
 	char * str = MakeStrAdr(20);
-	strcpy_s(str, "I am so happy~");
+	strcpy(str, "I am so happy~");
 	cout << str << endl;
 	//free(str);
 	delete[]str;									//18행:배열의 형태로 할당된 메모리 공간의 해제를 보이고 있다.
