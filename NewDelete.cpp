@@ -19,4 +19,4 @@ int main(void)
 	return 0;
 }
 
-//MemMalFree와 똑같은 오류가 생성.
+//MemMalFree에 오류 해결방법 .
