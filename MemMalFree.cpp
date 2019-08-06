@@ -1,11 +1,11 @@
 #include <iostream>
-#include <string.h>
+#include <string.h>					//2,3행:c++에서 c언어의 헤더파일을 추가하는것도 가능하다.
 #include <stdlib.h>
 using namespace std;
 
 char * MakeStrAdr(int len)
 {
-	char * str = (char*)malloc(sizeof(char) * len);
+	char * str = (char*)malloc(sizeof(char) * len);					//8행:문자열 저장을 위한 배열을 힙 영역에 할당하고 있다.
 	return str;
 }
 
@@ -14,7 +14,7 @@ int main(void)
 	char * str = MakeStrAdr(20);
 	strcpy_s(str, "I am so happy~");
 	cout << str << endl;
-	free(str);
+	free(str);												//힙에 할당된 메모리 공간을 소멸하고 있다.
 	return 0;
 }
 
