@@ -45,6 +45,8 @@ int main(void)
 //문제3
 //이번학기 점수를 입력받아 성적을 나타내시오.
 //100~90:A, 89~80:B, 79~70:C, 69~60:D 59~0:F
+//첫번째 코드의 경우 가독성이 떨어지기에 다른 코드를 작성해봤다.
+
 #include <stdio.h>
 
 int main(void)
@@ -86,5 +88,21 @@ int main(void)
 		}
 	}
 
+	return 0;
+}
+
+//2번째 이경우 출력하는건 한문장이므로 중괄호를 생략하고 들여쓰기를 사용하지 않아야 더 명확할거같아서 사용해봤다.
+#include <stdio.h>
+
+int main(void)
+{
+	int score = 0;
+	printf("점수를 입력하시오: ");
+	scanf_s("%d", & score);
+	if (score >= 90) printf("A\n");
+	else if (score >= 80) printf("B\n");
+	else if (score >= 70) printf("C\n");
+	else if (score >= 60) printf("D\n");
+	else printf("F\n");
 	return 0;
 }
