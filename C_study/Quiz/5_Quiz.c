@@ -107,3 +107,25 @@ int main(void)
 	else printf("F\n");
 	return 0;
 }
+
+
+//문제4
+//학점계산기 프로그램은 switch문으로 작성해보시오
+#include <stdio.h>
+
+int main(void)
+{
+	int score = 0;
+	printf("점수를 입력하시오: ");
+	scanf_s("%d", & score);
+
+	switch (score/10)
+	{
+	case 10: printf("A\n");
+	case 9: printf("A\n");
+	case 8: printf("B\n");
+	case 7: printf("C\n");
+	case 6: printf("D\n");
+	default: printf("F\n");
+	}
+}
