@@ -19,3 +19,19 @@ int main(void)
 
 //continue문은 현재 반복을 중단하고 다음 조건 값에 대한 처리를 수행한다.
 //continue문을 만나면 제어는 반복문의 마지막부분으로 전달되고 다음 반복 문장이 시작된다.
+#include <stdio.h>
+
+int main(void)
+{
+	int i;
+	printf("1~10사이의 짝수만 출력합니다.\n");
+
+	for (i = 1; i <= 10; i++)
+	{
+		if (i % 2 != 0)
+		{
+			continue;
+		}
+		printf("\n%d", i);
+	}
+}
