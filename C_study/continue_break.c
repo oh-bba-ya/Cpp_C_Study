@@ -28,9 +28,9 @@ int main(void)
 
 	for (i = 1; i <= 10; i++)
 	{
-		if (i % 2 != 0)
+		if (i % 2 != 0)				//짝수가 아닐경우.
 		{
-			continue;
+			continue;			//짝수가 아닐경우 continue를 통해 출력되지 않고 다음 숫자로 넘어가게 된다.
 		}
 		printf("\n%d", i);
 	}
