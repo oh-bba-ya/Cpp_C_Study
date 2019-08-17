@@ -33,3 +33,18 @@ int main(void)
 
 	return 0;
 }
+
+//만일 모두 0으로 채우고 싶다면.
+#include <stdio.h>
+
+int main(void)
+{
+	int i=0, x[5] = { 0};
+
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d", x[i]);
+	}
+
+	return 0;
+}
