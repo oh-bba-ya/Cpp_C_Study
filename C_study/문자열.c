@@ -90,7 +90,7 @@ int main(void)
 }
 
 
-//문자열 크기 구하기.
+//문자열 크기 구하기(직접).
 #include <stdio.h>
 
 int main(void)
@@ -101,6 +101,18 @@ int main(void)
 	for (i = 0; str[i] != '\0'; ++i);
 	
 	printf("length: %d\n", i);
+
+	return 0;
+}
+
+//문자열 크기 구하기2(함수이용).
+#include <stdio.h>
+#include <string.h>			//헤더파일 추가.
+
+int main(void)
+{
+	char str[20] = "Hello World";
+	printf("length: %d\n", strlen(str));		//strlen()
 
 	return 0;
 }
