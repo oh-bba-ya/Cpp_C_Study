@@ -39,3 +39,17 @@ int main(void)
 
 	return 0;
 }
+
+
+//인자로 전달된 주소의 문자부터 널문자 전까지 출력.
+#include <stdio.h>
+
+int main(void)
+{
+	char str[20] = "Hello World";
+
+	printf("%s\n", str);			//주소의 문자부터 널문자 전까지 출력.
+	printf("%s\n", str + 5);		//주소의 시작이 5부터이므로 공백부터 출력하게된다.
+
+	return 0;				//printf는 문자열의 크기를 모른다. 그렇기에 이런경우가 발생.
+}
