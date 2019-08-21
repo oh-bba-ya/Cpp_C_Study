@@ -140,7 +140,7 @@ int main(void)
 	int ret = 1;
 
 	ret = puts(str);				//puts(char s):s가 가리키는 문자열을 화면에 출력하고 마지막에 '\n'출력.
-	printf("return: %d", ret);		//출력에 성공하면 음수가 아닌값을 반환.
+	printf("return: %d", ret);		//출력에 성공하면 음수가 아닌값을 반환 실패할경우 EOF(End Of File = -1)반환.
 
 	return 0;
 }
