@@ -53,3 +53,38 @@ int main(void)
 
 	return 0;				//printf는 문자열의 크기를 모른다. 그렇기에 이런경우가 발생.
 }
+
+
+//%c 과 %s의 출력 차이
+//%c으로 이용.
+#include <stdio.h>
+
+int main(void)
+{
+	char str[20] = "Hello World";
+	int i;
+	str[7] = '\0';
+	for (i = 0; i < 20; i++)
+	{
+		printf("%c", str[i]);
+	}
+	printf("\n");
+
+	return 0;			//출력결과 Hello W rld
+}
+
+//%s이용.
+#include <stdio.h>
+
+int main(void)
+{
+	char str[20] = "Hello World";
+
+	str[7] = '\0';				//o = \0(널)으로 바꿨다.
+
+	printf("%s\n", str);
+	printf("%s\n", str + 5);
+
+	return 0;			//출력결과 Hello W 
+						//출력결과: W
+}
