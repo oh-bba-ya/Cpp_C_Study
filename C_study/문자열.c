@@ -88,3 +88,19 @@ int main(void)
 	return 0;			//출력결과 Hello W 
 						//출력결과: W
 }
+
+
+//문자열 크기 구하기.
+#include <stdio.h>
+
+int main(void)
+{
+	char str[20] = "Hello World";
+	int i;
+
+	for (i = 0; str[i] != '\0'; ++i);
+	
+	printf("length: %d\n", i);
+
+	return 0;
+}
