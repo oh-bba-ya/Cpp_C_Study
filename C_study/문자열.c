@@ -116,3 +116,15 @@ int main(void)
 
 	return 0;
 }
+
+
+//strcmp
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	printf("%d\n", strcmp("hi", "hello"));		//strcmp(char s1 , char s2) s1<s2의경우 음수출력.
+							//s1==s2 일 경우: 0 , s1 >s2 의경우 : 양수출력.
+	return 0;
+}
