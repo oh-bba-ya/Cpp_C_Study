@@ -128,3 +128,22 @@ int main(void)
 							//s1==s2 일 경우: 0 , s1 >s2 의경우 : 양수출력.
 	return 0;
 }
+
+
+//puts(str)
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char str[10] = "Hi World";
+	int ret = 1;
+
+	ret = puts(str);				//puts(char s):s가 가리키는 문자열을 화면에 출력하고 마지막에 '\n'출력.
+	printf("return: %d", ret);		//출력에 성공하면 음수가 아닌값을 반환.
+
+	return 0;
+}
+
+
+//
