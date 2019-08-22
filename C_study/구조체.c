@@ -116,3 +116,23 @@ void main()
 	printf("%d,%s,%.2f\n", st2.id, st2.name, st2.grade);
 
 }
+
+
+//구조체 포인터 간접연산자 사용.
+#include <stdio.h>
+
+struct student			//구조체 자료형 선언.
+{
+	int id;
+	char name[8];
+	double grade;
+};
+
+void main()
+{
+	struct student st1, * pst = &st1;
+
+	(*pst).id = 20;				//pst가 가리키는 구조체의 멤버 id에 20대입.
+
+	printf("id: %d\n", (*pst).id + 15);
+}
