@@ -45,3 +45,26 @@ void main()
 	printf("doule: %d\n", sizeof(double));					//8바이트.
 	printf("struct student: %d\n", sizeof(struct student));			//24바이트.
 }
+
+
+//구조체 배열.
+#include <stdio.h>
+
+struct complex			//구조체 자료형 선언.
+{
+	double real, imag;
+};
+
+void main()
+{
+	int i;
+	struct complex x[3] = { {1.2 , 2.0}, {-2.2, -0.3} };
+
+	x[2].real = x[0].real + x[1].real;
+	x[2].imag = x[0].imag + x[1].imag;
+
+	for (i = 0; i < 3; ++i)
+	{
+		printf("x[%d]: %.1f + %.1fi\n", i, x[i].real, x[i].imag);
+	}
+}
