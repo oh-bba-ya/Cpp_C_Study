@@ -23,3 +23,25 @@ void main()
 	printf("grade:%.2f\n", st1.grade);
 
 }
+
+
+//구조체의 경우 몇bite를 차지할까.
+//구조체의 경우 메모리의 효율성을 위해서 8의 배수로 할당하게 된다.
+//단, 할당 크기의 경우 시스템마다 다르며 안쓰는 자투리 공간은 사용하지 않는다.
+
+#include <stdio.h>
+
+struct student			//구조체 student  정의는 함수 밖에서.
+{
+	int id;
+	char name[8];
+	double grade;
+};
+
+void main()
+{
+	printf("int: %d\n", sizeof(int));					//4바이트.
+	printf("char: %d\n", sizeof(char[8]));					//8바이트.
+	printf("doule: %d\n", sizeof(double));					//8바이트.
+	printf("struct student: %d\n", sizeof(struct student));			//24바이트.
+}
