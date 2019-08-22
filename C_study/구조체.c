@@ -47,7 +47,31 @@ void main()
 }
 
 
-//구조체 배열.
+//구조체 배열1.
+#include <stdio.h>
+
+struct student			//구조체 자료형 선언.
+{
+	int id;
+	char name[8];
+	double grade;
+};
+
+void main()
+{
+	int i;
+	struct student st[3] = { {10,"Tom",3.2}, {20,"Alice"} };		//생략된곳은 모두 0으로 초기화.
+
+	for (i = 0; i < 3; ++i)
+	{
+		printf("%d:%d,%s,%.2f\n", i, st[i].id, st[i].name, st[i].grade);
+	}
+
+}
+
+
+//구조체 배열2 복소수.
+
 #include <stdio.h>
 
 struct complex			//구조체 자료형 선언.
