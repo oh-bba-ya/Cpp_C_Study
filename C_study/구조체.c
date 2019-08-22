@@ -92,3 +92,27 @@ void main()
 		printf("x[%d]: %.1f + %.1fi\n", i, x[i].real, x[i].imag);
 	}
 }
+
+
+//구조체 포인터.
+#include <stdio.h>
+
+struct student			//구조체 자료형 선언.
+{
+	int id;
+	char name[8];
+	double grade;
+};
+
+void main()
+{
+	struct student st1 = { 10,"Tom",3.2 },st2;
+	struct student *pst;			//구조체 포인터 변수선언.
+	pst = &st1;				//연결.
+
+	st2 = *pst;			//st2에 pst가 가리키는 구조체 변수 대입.
+
+	printf("%d,%s,%.2f\n", st1.id, st1.name, st1.grade);
+	printf("%d,%s,%.2f\n", st2.id, st2.name, st2.grade);
+
+}
