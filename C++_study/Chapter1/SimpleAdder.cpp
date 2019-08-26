@@ -14,3 +14,5 @@ int main(void)
 	std::cout << "add result: " << result << std::endl;
 	return 0;
 }
+
+//만일 실수형을 입력받고 싶다면 5행,9행,13행의 자료형을 double로 바꾸면된다.
