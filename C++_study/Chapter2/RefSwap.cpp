@@ -3,7 +3,7 @@ using namespace std;
 
 void SwapByRef2(int& ref1, int& ref2)
 {
-	int temp = ref1;                            //두 참조자 ref1,ref2에 저장된 값의 교환과정이다. 이 교환의 과정은 main함수에 선언 된 변수 val1과 val2의 교화으로 이루어진다.
+	int temp = ref1;                            //6,8행:두 참조자 ref1,ref2에 저장된 값의 교환과정이다. 이 교환의 과정은 main함수에 선언 된 변수 val1과 val2의 교화으로 이루어진다.
 	ref1 = ref2;
 	ref2 = temp;
 }
@@ -18,3 +18,6 @@ int main(void)
 	cout << "val2: " << val2 << endl;
 	return 0;
 }
+
+
+//call-by-reference를 참고하여 포인터가 아닌 참조자를 매개변수에 입력하여 변수의 결과값을 바꿔보았다.
